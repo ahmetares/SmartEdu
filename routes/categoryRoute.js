@@ -6,5 +6,6 @@ const router= express.Router()
 
 
 router.route('/').post(categoryController.createCategory)   // localhost:3000/categories
+router.route('/:id').delete(categoryController.deleteCategory)   // localhost:3000/categories
 
 module.exports = router;
