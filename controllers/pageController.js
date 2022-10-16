@@ -12,8 +12,7 @@ exports.getIndexPage = async (req,res) => {
     
 
     const last2course = await Course.find({}).sort('-dateCreated').limit(2)
-    console.log(last2course[0].name)
-    console.log(last2course[1].name)
+
 
     res.status(200).render('index', {
         page_name:'index',
